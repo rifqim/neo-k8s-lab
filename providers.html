@@ -54,11 +54,9 @@ blockquote p::after {
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
     <div class="container">
-     <img src="https://rifqim.github.io/neo-k8s-lab/img/logo-biznetgio.svg"> <a class="navbar-brand js-scroll-trigger" href="#page-top">&nbsp; NEO Hosted Kubernetes</a> 
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        Menu
-        <i class="fas fa-bars"></i>
-      </button>
+      <a href="https://biznetgio.com" target="_blank">
+        <img class="logo-bgn" src="img/logo-biznetgio.svg">
+      </a>
     </div>
   </nav>
 
@@ -67,25 +65,23 @@ blockquote p::after {
       <div class="row h-100">
         <div class="col-lg-7 my-auto">
           <div class="header-content mx-auto">
-            <h1 class="mb-5">Reliable, efficient, and Maintenance-free Kubernetes Infrastructure</h1>
-<h2>Choose your Login:</h2>
+            <h1 class="header-neo">NEO Hosted Kubernetes</h1>
+            <h3 class="mb-5">Reliable, Efficient, and Maintenance-free Kubernetes Infrastructure</h3>
+            <h3>Choose your Login:</h3>
 
-    {{ range $provider := .Providers }}
-      <div>
-        {{ if eq $provider.Name "anypassword" }}
-          <a href="{{$provider.URL}}">Log in</a> with any username and password
-        {{ else }}
-          <a href="{{$provider.URL}}">{{$provider.Name}}</a>
-        {{ end }}
-      </div>
-    {{ end }}
-
-</br></br>
-            <a target="_blank" href="https://portal.biznetgio.com/user/register" class="btn btn-outline btn-xl js-scroll-trigger">Register Now for Free!</a>
+              {{ range $provider := .Providers }}
+                <div>
+                  {{ if eq $provider.Name "anypassword" }}
+                    <a href="{{$provider.URL}}">Log in</a> with any username and password
+                  {{ else }}
+                    <a href="{{$provider.URL}}">{{$provider.Name}}</a>
+                  {{ end }}
+                </div>
+              {{ end }}
           </div>
         </div>
         <div class="col-lg-5 my-auto">
-                  <img src="https://rifqim.github.io/neo-k8s-lab/vendor/bootstrap/illustration-user.svg" class="img-fluid" alt="">
+                  <img src="vendor/bootstrap/illustration-user.svg" class="img-fluid" alt="">
                 </div>
               </div>
             </div>
@@ -94,23 +90,6 @@ blockquote p::after {
       </div>
     </div>
   </header>
-
-  <footer>
-    <div class="container">
-      <p>Experimental Product - &copy; PT Biznet Gio Nusantara 2021. All Rights Reserved.</p>
-      <ul class="list-inline">
-        <li class="list-inline-item">
-          <a href="https://www.biznetgio.com/legal#nav-privacy-policy" target="_blank">Privacy</a>
-        </li>
-        <li class="list-inline-item">
-          <a href="https://www.biznetgio.com/legal#nav-usage-policy" target="_blank">Terms</a>
-        </li>
-        <li class="list-inline-item">
-          <a href="https://www.biznetgio.com/legal#nav-usage-policy" target="_blank">FAQ</a>
-        </li>
-      </ul>
-    </div>
-  </footer>
 
   <!-- Bootstrap core JavaScript -->
   <script src="https://rifqim.github.io/neo-k8s-lab/vendor/jquery/jquery.min.js"></script>
@@ -125,4 +104,3 @@ blockquote p::after {
 </body>
 
 </html>
-
