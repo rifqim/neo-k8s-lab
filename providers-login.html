@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>NEO Hosted Kubernetes</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="https://rifqim.github.io/neo-k8s-lab/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="https://rifqim.github.io/neo-k8s-lab/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://rifqim.github.io/neo-k8s-lab/vendor/simple-line-icons/css/simple-line-icons.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+
+  <!-- Plugin CSS -->
+  <!-- <link rel="stylesheet" href="device-mockups/device-mockups.min.css"> -->
+
+  <!-- Custom styles for this template -->
+  <link href="https://rifqim.github.io/neo-k8s-lab/css/new-age.css" rel="stylesheet">
+
+<style>
+blockquote {
+    margin: 0;
+}
+
+blockquote p {
+    padding: 15px;
+    background: #2bab7e;
+    border-radius: 5px;
+       color: #fff;
+}
+
+blockquote p::before {
+    content: '\201C';
+}
+
+blockquote p::after {
+    content: '\201D';
+}
+</style>
+
+</head>
+
+<body id="page-top">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
+      <a href="https://biznetgio.com" target="_blank">
+        <img class="logo-bgn" src="https://rifqim.github.io/neo-k8s-lab/img/logo-biznetgio.svg">
+      </a>
+    </div>
+  </nav>
+
+  <header class="masthead">
+    <div class="container h-100">
+      <div class="row h-100">
+        <div class="col-lg-7 my-auto">
+          <div class="header-content mx-auto">
+            <h1 class="header-neo">NEO Hosted Kubernetes</h1>
+            <h3 class="mb-5">Reliable, Efficient, and Maintenance-free Kubernetes Infrastructure</h3>
+            <h3>Choose your Login:</h3>
+
+              {{ range $provider := .Providers }}
+                <div>
+                  {{ if eq $provider.Name "anypassword" }}
+                    <a href="{{$provider.URL}}">Log in</a> with any username and password
+                  {{ else }}
+                    <a href="{{$provider.URL}}">{{$provider.Name}}</a>
+                  {{ end }}
+                </div>
+              {{ end }}
+          </div>
+        </div>
+        <div class="col-lg-5 my-auto">
+                  <img src="https://rifqim.github.io/neo-k8s-lab/vendor/bootstrap/illustration-user.svg" class="img-fluid" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="https://rifqim.github.io/neo-k8s-lab/vendor/jquery/jquery.min.js"></script>
+  <script src="https://rifqim.github.io/neo-k8s-lab/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="https://rifqim.github.io/neo-k8s-lab/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="https://rifqim.github.io/neo-k8s-lab/js/new-age.min.js"></script>
+
+</body>
+
+</html>
