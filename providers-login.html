@@ -67,17 +67,34 @@ blockquote p::after {
           <div class="header-content mx-auto">
             <h1 class="header-neo">NEO Hosted Kubernetes</h1>
             <h3 class="mb-5">Reliable, Efficient, and Maintenance-free Kubernetes Infrastructure</h3>
-            <h3>Choose your Login:</h3>
+            <h3>Input your Username and Password :</h3>
+            {{ if .Error }}
+              <div class="error">{{ .Error }}</div>
+              <!-- Error code: {{ .ErrorCode }} -->
+            {{ end }}
 
-              {{ range $provider := .Providers }}
-                <div>
-                  {{ if eq $provider.Name "anypassword" }}
-                    <a href="{{$provider.URL}}">Log in</a> with any username and password
-                  {{ else }}
-                    <a href="{{$provider.URL}}">{{$provider.Name}}</a>
-                  {{ end }}
-                </div>
-              {{ end }}
+            <!-- Identity provider name: {{ .ProviderName }} -->
+            <form action="{{ .Action }}" method="POST">
+              <input type="hidden" name="{{ .Names.Then }}" value="{{ .Values.Then }}">
+              <input type="hidden" name="{{ .Names.CSRF }}" value="{{ .Values.CSRF }}">
+
+              <div>
+                <label for="inputUsername">Username</label>
+              </div>
+              <div>
+                <input type="text" id="inputUsername" autofocus="autofocus" type="text" name="{{ .Names.Username }}" value="{{ .Values.Username }}">
+              </div>
+
+              <div>
+                <label for="inputPassword">Password</label>
+              </div>
+              <div>
+                <input type="password" id="inputPassword" type="password" name="{{ .Names.Password }}" value="">
+              </div>
+
+              <button type="submit">Log In</button>
+
+            </form>
           </div>
         </div>
         <div class="col-lg-5 my-auto">
